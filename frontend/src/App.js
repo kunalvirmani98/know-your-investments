@@ -1,10 +1,7 @@
 import './App.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Navbar, Form, Nav, FormControl, Button } from 'react-bootstrap';
+import MarketCard from './marketCard.jsx';
 
 function App() {
   return (
@@ -21,6 +18,16 @@ function App() {
           <Button variant="outline-info">Search</Button>
         </Form>
       </Navbar>
+      <Container fluid={true}>
+        <Row />
+        <Row>
+          <Col />
+          <Col><MarketCard indexName="Nifty" indexValue="14000" /></Col>
+          <Col><MarketCard indexName="Sensex" indexValue="40000" /></Col>
+          <Col />
+        </Row>
+        <Row />
+      </Container>
     </div>
   );
 }
